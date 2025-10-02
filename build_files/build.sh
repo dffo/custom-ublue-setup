@@ -12,6 +12,9 @@ set -ouex pipefail
 # this installs a package from fedora repos
 dnf5 install -y tmux 
 dnf5 install -y fastfetch
+dnf5 install -y featherpad
+dnf5 install -y rclone
+dnf5 install -y dconf-editor
 
 # Use a COPR Example:
 #
@@ -19,6 +22,10 @@ dnf5 install -y fastfetch
 # dnf5 -y install package
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
+#
+dnf5 -y copr enable marcelohdez/dim
+sudo dnf install dim-screen
+dnf5 -y copr disable marcelohdez/dim
 
 #### Example for enabling a System Unit File
 
