@@ -24,7 +24,7 @@ dnf5 install -y dconf-editor
 # dnf5 -y copr disable ublue-os/staging
 #
 dnf5 -y copr enable marcelohdez/dim
-sudo dnf install dim-screen
+sudo dnf install -y dim-screen
 dnf5 -y copr disable marcelohdez/dim
 
 #### Example for enabling a System Unit File
