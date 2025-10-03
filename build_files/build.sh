@@ -15,8 +15,8 @@ dnf5 install -y fastfetch
 dnf5 install -y featherpad
 dnf5 install -y rclone
 dnf5 install -y dconf-editor
-dnf5 install -y racket-minimal
-#raco pkg install pollen #?
+dnf5 install -y racket
+raco pkg install pollen #?
 
 # Use a COPR Example:
 #
