@@ -16,7 +16,7 @@ dnf5 install -y featherpad
 dnf5 install -y rclone
 dnf5 install -y dconf-editor
 dnf5 install -y racket
-raco pkg install pollen #?
+#raco pkg install pollen #nah, doesn't work---tries to make .local in root
 
 # Use a COPR Example:
 #
