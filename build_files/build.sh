@@ -17,6 +17,9 @@ dnf5 install -y rclone
 dnf5 install -y dconf-editor
 dnf5 install -y racket
 dnf5 install -y xwayland-satellite
+dnf5 install -y gh
+dnf5 install -y pipx
+
 #raco pkg install pollen #nah, doesn't work---tries to make .local in root
 
 # Use a COPR Example:
