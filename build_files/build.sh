@@ -20,6 +20,10 @@ dnf5 install -y xwayland-satellite
 dnf5 install -y gh
 dnf5 install -y pipx
 
+dnf5 install -y virt-manager
+dnf5 install -y qemu-kvm
+dnf5 install -y qemu
+
 #raco pkg install pollen #nah, doesn't work---tries to make .local in root
 
 # Use a COPR Example:
@@ -36,3 +40,4 @@ dnf5 -y copr disable marcelohdez/dim
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
+systemctl enable libvirtd
