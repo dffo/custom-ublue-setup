@@ -28,6 +28,7 @@ dnf5 install -y mate-polkit
 dnf5 install -y virt-manager
 dnf5 install -y qemu-kvm
 dnf5 install -y qemu
+dnf5 install -y libvirt
 
 #raco pkg install pollen #nah, doesn't work---tries to make .local in root
 
