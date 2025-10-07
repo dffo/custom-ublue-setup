@@ -11,6 +11,7 @@ set -ouex pipefail
 
 # this installs a package from fedora repos
 dnf5 install -y tmux 
+dnf5 install -y vim
 dnf5 install -y fastfetch
 dnf5 install -y featherpad
 dnf5 install -y rclone
@@ -19,6 +20,10 @@ dnf5 install -y racket
 dnf5 install -y xwayland-satellite
 dnf5 install -y gh
 dnf5 install -y pipx
+dnf5 install -y samba
+
+dnf5 install -y mate-polkit
+
 
 dnf5 install -y virt-manager
 dnf5 install -y qemu-kvm
