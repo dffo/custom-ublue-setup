@@ -21,14 +21,26 @@ dnf5 install -y xwayland-satellite
 dnf5 install -y gh
 dnf5 install -y pipx
 dnf5 install -y samba
+dnf5 install -y docker
+dnf5 install -y distrobox
 
 dnf5 install -y mate-polkit
-
 
 dnf5 install -y virt-manager
 dnf5 install -y qemu-kvm
 dnf5 install -y qemu
 dnf5 install -y libvirt
+
+cat > /etc/polkit-1/rules.d/80-libvirt-manage.rules << 'EOF'
+polkit.addRule(function(action, subject) {
+    if (action.id == "org.libvirt.unix.manage" &&
+        subject.local &&
+        subject.active &&
+        subject.isInGroup("wheel")) {
+        return polkit.Result.YES;
+    }
+});
+EOF
 
 #raco pkg install pollen #nah, doesn't work---tries to make .local in root
 
