@@ -25,6 +25,7 @@ dnf5 install -y docker
 dnf5 install -y distrobox
 dnf5 install -y btop
 dnf5 install -y stow
+dnf5 install -y tldr
 
 dnf5 install -y mate-polkit
 
@@ -43,8 +44,6 @@ polkit.addRule(function(action, subject) {
     }
 });
 EOF
-
-#raco pkg install pollen #nah, doesn't work---tries to make .local in root
 
 # Use a COPR Example:
 #
