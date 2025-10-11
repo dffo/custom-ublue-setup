@@ -47,9 +47,10 @@ EOF
 
 dnf5 install -y \
   https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
-dnf install -y \
+dnf5 install -y \
   https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
+dnf5 group install multimedia
 dnf5 swap -y ffmpeg-free ffmpeg --allowerasing
 dnf5 update -y @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
 dnf5 swap -y mesa-va-drivers mesa-va-drivers-freeworld
