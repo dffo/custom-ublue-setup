@@ -45,7 +45,7 @@ polkit.addRule(function(action, subject) {
 });
 EOF
 
-dnf5 install ddcutil
+dnf5 install -y ddcutil
 
 cat > /etc/udev/rules.d/45-ddc-i2c.rules << 'EOF'
 KERNEL=="i2c-[0-9]*", GROUP="i2c", MODE="0660"
