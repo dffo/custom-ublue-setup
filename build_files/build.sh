@@ -45,6 +45,12 @@ polkit.addRule(function(action, subject) {
 });
 EOF
 
+dnf5 install ddcutil
+
+cat > /etc/udev/rules.d/45-ddc-i2c.rules << 'EOF'
+KERNEL=="i2c-[0-9]*", GROUP="i2c", MODE="0660"
+EOF
+
 dnf5 install -y \
   https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 dnf5 install -y \
