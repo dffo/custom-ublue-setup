@@ -24,7 +24,7 @@ dnf5 install -y samba
 dnf5 install -y docker
 dnf5 install -y distrobox
 dnf5 install -y btop
-dnf5 install -y stow
+dnf5 install -y chezmoi
 dnf5 install -y tldr
 # caja has live timestamp updating and thunar doesn't :(
 dnf5 install -y caja
