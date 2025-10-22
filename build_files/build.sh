@@ -26,8 +26,6 @@ dnf5 install -y distrobox
 dnf5 install -y btop
 dnf5 install -y chezmoi
 dnf5 install -y tldr
-# caja has live timestamp updating and thunar doesn't :(
-dnf5 install -y caja
 
 dnf5 install -y mate-polkit
 
@@ -72,8 +70,12 @@ dnf5 swap -y mesa-vdpau-drivers mesa-vdpau-drivers-freeworld
 # dnf5 -y copr disable ublue-os/staging
 #
 dnf5 -y copr enable marcelohdez/dim
-sudo dnf install -y dim-screen
+sudo dnf5 install -y dim-screen
 dnf5 -y copr disable marcelohdez/dim
+
+dnf5 -y copr enable erikreider/SwayNotificationCenter
+sudo dnf5 -y install SwayNotificationCenter
+dnf5 -y copr enable erikreider/SwayNotificationCenter
 
 #### Example for enabling a System Unit File
 
