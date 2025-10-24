@@ -23,6 +23,7 @@ dnf5 install -y pipx
 dnf5 install -y samba
 dnf5 install -y docker docker-compose
 dnf5 install -y distrobox
+dnf5 install -y freerdp
 dnf5 install -y btop
 dnf5 install -y chezmoi
 dnf5 install -y tldr
