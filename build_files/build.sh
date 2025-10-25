@@ -39,8 +39,8 @@ dnf5 install -y terminus-fonts
 
 # Set tty font to Terminus (for HiDPI)
 cat > /etc/vconsole.conf << 'EOF'
-KEYMAP=us
-FONT=ter-v32b
+KEYMAP="us"
+FONT="ter-v32b"
 EOF
 
 # Give wheel permission to make virtual machines without passwd
