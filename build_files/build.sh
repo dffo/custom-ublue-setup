@@ -35,6 +35,14 @@ dnf5 install -y qemu-kvm
 dnf5 install -y qemu
 dnf5 install -y libvirt
 
+dnf5 install -y terminus-fonts
+
+# Set tty font to Terminus (for HiDPI)
+grep -q '^FONT=' /etc/vconsole.conf \
+  && sed -i 's/^FONT=.*/FONT="ter-v32b"/' /etc/vconsole.conf \
+  || echo 'FONT="ter-v32b"' >> /etc/vconsole.conf
+
+# Give wheel permission to make virtual machines without passwd
 cat > /etc/polkit-1/rules.d/80-libvirt-manage.rules << 'EOF'
 polkit.addRule(function(action, subject) {
     if (action.id == "org.libvirt.unix.manage" &&
@@ -52,6 +60,13 @@ cat > /etc/udev/rules.d/45-ddc-i2c.rules << 'EOF'
 KERNEL=="i2c-[0-9]*", GROUP="i2c", MODE="0660"
 EOF
 
+# Fix sddm scaling
+cat > /etc/sddm.conf.d/99-scale.conf << 'EOF'
+[General]
+GreeterEnvironment=QT_SCREEN_SCALE_FACTORS=2,QT_FONT_DPI=192
+EOF
+
+# Install nonfree codecs
 dnf5 install -y \
   https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 dnf5 install -y \
