@@ -38,9 +38,10 @@ dnf5 install -y libvirt
 dnf5 install -y terminus-fonts
 
 # Set tty font to Terminus (for HiDPI)
-grep -q '^FONT=' /etc/vconsole.conf \
-  && sed -i 's/^FONT=.*/FONT="ter-v32b"/' /etc/vconsole.conf \
-  || echo 'FONT="ter-v32b"' >> /etc/vconsole.conf
+cat > /etc/vconsole.conf << 'EOF'
+KEYMAP=us
+FONT=ter-v32b
+EOF
 
 # Give wheel permission to make virtual machines without passwd
 cat > /etc/polkit-1/rules.d/80-libvirt-manage.rules << 'EOF'
