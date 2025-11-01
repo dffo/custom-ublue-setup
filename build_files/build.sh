@@ -35,7 +35,7 @@ dnf5 install -y qemu-kvm
 dnf5 install -y qemu
 dnf5 install -y libvirt
 
-dnf5 install -y terminus-fonts
+dnf5 install -y terminus-fonts-console
 
 # Set tty font to Terminus (for HiDPI)
 cat > /etc/vconsole.conf << 'EOF'

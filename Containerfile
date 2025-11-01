@@ -14,7 +14,7 @@ COPY build_files /
 # Universal Blue Images: https://github.com/orgs/ublue-os/packages
 # Fedora base image: quay.io/fedora/fedora-bootc:41
 # CentOS base images: quay.io/centos-bootc/centos-bootc:stream10
-FROM quay.io/fedora/fedora-sway-atomic:latest
+FROM quay.io/fedora/fedora-sway-atomic:42
 
 ### MODIFICATIONS
 ## make modifications desired in your image and install packages by modifying the build.sh script
