@@ -87,6 +87,9 @@ dnf5 update -y @multimedia --setopt="install_weak_deps=False" --exclude=PackageK
 dnf5 swap -y mesa-va-drivers mesa-va-drivers-freeworld
 dnf5 swap -y mesa-vdpau-drivers mesa-vdpau-drivers-freeworld
 
+# Install v4l2 loopback device
+dnf5 install -y install v4l2loopback
+
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
