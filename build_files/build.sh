@@ -55,6 +55,13 @@ polkit.addRule(function(action, subject) {
 });
 EOF
 
+# Disable hires scrolling
+cat > /etc/libinput/local-overrides.quirks << 'EOF'
+[disable hires scroll]
+MatchName=*
+AttrEventCode=-REL_WHEEL_HI_RES;-REL_HWHEEL_HI_RES;
+EOF
+
 dnf5 install -y ddcutil
 
 cat > /etc/udev/rules.d/45-ddc-i2c.rules << 'EOF'
