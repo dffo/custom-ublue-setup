@@ -88,8 +88,8 @@ dnf5 swap -y mesa-va-drivers mesa-va-drivers-freeworld
 dnf5 swap -y mesa-vdpau-drivers mesa-vdpau-drivers-freeworld
 
 # Install v4l2 loopback device
-dnf5 install -y install v4l2loopback
-dnf5 install -y install kmod-v4l2loopback
+dnf5 install -y kmod-v4l2loopback v4l2loopback-utils
+
 
 # Use a COPR Example:
 #
