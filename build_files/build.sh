@@ -56,6 +56,7 @@ polkit.addRule(function(action, subject) {
 EOF
 
 # Disable hires scrolling
+mkdir -p /etc/libinput
 cat > /etc/libinput/local-overrides.quirks << 'EOF'
 [disable hires scroll]
 MatchName=*
