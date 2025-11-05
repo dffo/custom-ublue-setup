@@ -1,0 +1,17 @@
+[Unit]
+Description=Build and load v4l2loopback kernel module via akmods
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/akmods --force
+ExecStart=/usr/sbin/modprobe v4l2loopback
+RemainAfterExit=yes
+StandardOutput=journal+console
+StandardError=journal+console
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+
