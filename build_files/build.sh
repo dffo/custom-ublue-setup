@@ -90,9 +90,6 @@ dnf5 swap -y mesa-vdpau-drivers mesa-vdpau-drivers-freeworld
 # Install v4l2 loopback device
 dnf5 install -y kmod-v4l2loopback v4l2loopback-utils
 
-akmods
-
-
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
