@@ -15,11 +15,6 @@ dnf5 install -y vim
 dnf5 install -y fastfetch
 dnf5 install -y featherpad
 dnf5 install -y rclone
-
-# symlink rclone mount bins
-ln -s /usr/bin/rclone /sbin/mount.rclone
-ln -s /usr/bin/rclone /usr/bin/rclonefs
-
 dnf5 install -y dconf-editor
 dnf5 install -y racket
 dnf5 install -y xwayland-satellite
