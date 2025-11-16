@@ -27,6 +27,7 @@ dnf5 install -y freerdp
 dnf5 install -y btop
 dnf5 install -y chezmoi
 dnf5 install -y tldr
+dnf5 install -y yq
 
 dnf5 install -y mate-polkit
 
@@ -34,7 +35,7 @@ dnf5 install -y virt-manager
 dnf5 install -y qemu-kvm
 dnf5 install -y qemu
 dnf5 install -y libvirt
-dnf5 install -y sshfs
+#dnf5 install -y sshfs
 
 dnf5 install -y terminus-fonts-console
 
