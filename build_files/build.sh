@@ -27,7 +27,7 @@ dnf5 install -y freerdp
 dnf5 install -y btop
 dnf5 install -y chezmoi
 dnf5 install -y tldr
-dnf5 install -y yq
+dnf5 install -y rsyslog
 
 dnf5 install -y mate-polkit
 
@@ -109,5 +109,6 @@ dnf5 -y copr enable erikreider/SwayNotificationCenter
 
 #### Example for enabling a System Unit File
 
+systemctl enable rsyslog
 systemctl enable podman.socket
 systemctl enable libvirtd
