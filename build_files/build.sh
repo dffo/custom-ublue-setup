@@ -35,7 +35,7 @@ dnf5 install -y virt-manager
 dnf5 install -y qemu-kvm
 dnf5 install -y qemu
 dnf5 install -y libvirt
-#dnf5 install -y sshfs
+dnf5 install -y sshfs
 
 dnf5 install -y terminus-fonts-console
 
