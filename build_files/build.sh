@@ -29,6 +29,24 @@ dnf5 install -y chezmoi
 dnf5 install -y tldr
 dnf5 install -y rsyslog
 
+# Tell systemd to create the rsyslog directory
+cat > /etc/tmpfiles.d/rsyslog.conf << 'EOF' 
+d /var/lib/rsyslog 0755 root root - 
+EOF
+
+# persist journald entries
+cat > /etc/tmpfiles.d/systemd-journal.conf << 'EOF'
+d /var/log/journal 2755 root systemd-journal -
+EOF
+
+# Journald: forward to syslog
+mkdir -p /etc/systemd/journald.conf.d/
+cat > /etc/systemd/journald.conf.d/forward-to-syslog.conf << 'EOF'
+[Journal]
+ForwardToSyslog=yes
+EOF
+
+
 dnf5 install -y mate-polkit
 
 dnf5 install -y virt-manager
