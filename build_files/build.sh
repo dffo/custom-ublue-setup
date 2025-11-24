@@ -128,5 +128,7 @@ dnf5 -y copr enable erikreider/SwayNotificationCenter
 #### Example for enabling a System Unit File
 
 systemctl enable rsyslog
+systemctl enable smb
+systemctl enable nmb
 systemctl enable podman.socket
 systemctl enable libvirtd
