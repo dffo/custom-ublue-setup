@@ -28,7 +28,8 @@ dnf5 install -y btop
 dnf5 install -y chezmoi
 dnf5 install -y tldr
 dnf5 install -y rsyslog
-dnf5 install -y dolphin
+dnf5 install -y caja
+dnf5 remove -y thunar
 
 # Tell systemd to create the rsyslog directory
 cat > /etc/tmpfiles.d/rsyslog.conf << 'EOF' 
