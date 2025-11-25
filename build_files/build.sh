@@ -28,6 +28,7 @@ dnf5 install -y btop
 dnf5 install -y chezmoi
 dnf5 install -y tldr
 dnf5 install -y rsyslog
+dnf5 install -y dolphin
 
 # Tell systemd to create the rsyslog directory
 cat > /etc/tmpfiles.d/rsyslog.conf << 'EOF' 
