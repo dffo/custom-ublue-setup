@@ -12,6 +12,7 @@ set -ouex pipefail
 # this installs a package from fedora repos
 dnf5 install -y tmux 
 dnf5 install -y vim
+dnf5 install -y emacs
 dnf5 install -y fastfetch
 dnf5 install -y featherpad
 dnf5 install -y rclone
