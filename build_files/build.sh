@@ -31,6 +31,7 @@ dnf5 install -y chezmoi
 dnf5 install -y tldr
 dnf5 install -y rsyslog
 dnf5 install -y caja caja-open-terminal
+dnf5 install -y clang clang-tools-extra
 
 # Tell systemd to create the rsyslog directory
 cat > /etc/tmpfiles.d/rsyslog.conf << 'EOF' 
