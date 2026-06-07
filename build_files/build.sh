@@ -100,6 +100,11 @@ cat > /etc/sddm.conf.d/99-scale.conf << 'EOF'
 GreeterEnvironment=QT_SCREEN_SCALE_FACTORS=2,QT_FONT_DPI=192
 EOF
 
+# Enable SysRq
+cat > /etc/sysctl.d/90-sysrq.conf << 'EOF'
+kernel.sysrq = 1
+EOF
+
 # Install nonfree codecs
 dnf5 install -y \
   https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
