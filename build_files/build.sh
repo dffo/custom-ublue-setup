@@ -35,6 +35,7 @@ dnf5 install -y caja caja-open-terminal
 dnf5 install -y clang clang-tools-extra
 dnf5 install -y inotify-tools
 dnf5 install -y sysstat iotop-c
+dnf5 install -y lm_sensors
 
 # Tell systemd to create the rsyslog directory
 cat > /etc/tmpfiles.d/rsyslog.conf << 'EOF' 
