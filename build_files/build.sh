@@ -118,8 +118,7 @@ dnf5 install -y \
 dnf5 group install -y multimedia
 dnf5 swap -y ffmpeg-free ffmpeg --allowerasing
 dnf5 update -y @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
-dnf5 swap -y mesa-va-drivers mesa-va-drivers-freeworld
-dnf5 swap -y mesa-vdpau-drivers mesa-vdpau-drivers-freeworld
+dnf5 install mesa-va-drivers-freeworld
 
 # Install v4l2 loopback device
 #dnf5 install -y kmod-v4l2loopback v4l2loopback-utils
